@@ -1,4 +1,3 @@
-
 package Ventana;
 
 public class Interfaz extends javax.swing.JFrame {
@@ -12,21 +11,21 @@ public class Interfaz extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jLabelReal = new javax.swing.JLabel();
         jLabel2aprox = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jTextFieldAbso = new javax.swing.JTextField();
-        jTextFieldRela = new javax.swing.JTextField();
+        jtxtREAL = new javax.swing.JTextField();
+        jtxtAPROX = new javax.swing.JTextField();
         Calcular = new javax.swing.JButton();
         jCheckBoxRedon = new javax.swing.JCheckBox();
         jCheckBoxAprox = new javax.swing.JCheckBox();
         jCheckBox2 = new javax.swing.JCheckBox();
-        jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jTextFieldResulAbs = new javax.swing.JTextField();
-        jTextFieldResulRel = new javax.swing.JTextField();
+        jtxtERR_ABSO = new javax.swing.JTextField();
+        jtxtERR_REL = new javax.swing.JTextField();
         ButtonRegresar = new javax.swing.JButton();
         JLabelFondo = new javax.swing.JLabel();
 
@@ -59,13 +58,13 @@ public class Interfaz extends javax.swing.JFrame {
         jLabel1.setText("INGRESAR LOS VALORES");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, -1, 20));
 
-        jTextFieldAbso.addActionListener(new java.awt.event.ActionListener() {
+        jtxtREAL.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldAbsoActionPerformed(evt);
+                jtxtREALActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextFieldAbso, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 90, 200, -1));
-        getContentPane().add(jTextFieldRela, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, 200, -1));
+        getContentPane().add(jtxtREAL, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 90, 200, -1));
+        getContentPane().add(jtxtAPROX, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, 200, -1));
 
         Calcular.setText("Calcular");
         Calcular.addActionListener(new java.awt.event.ActionListener() {
@@ -100,24 +99,19 @@ public class Interfaz extends javax.swing.JFrame {
         });
         getContentPane().add(jCheckBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 220, -1, -1));
 
-        jLabel2.setFont(new java.awt.Font("Oswald", 0, 12)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Resultado");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, 60, 20));
-
         jLabel3.setText("Error Absoluto: ");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 420, -1, -1));
 
         jLabel4.setText("Error Relativo: ");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 450, -1, -1));
 
-        jTextFieldResulAbs.addActionListener(new java.awt.event.ActionListener() {
+        jtxtERR_ABSO.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldResulAbsActionPerformed(evt);
+                jtxtERR_ABSOActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextFieldResulAbs, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 410, 240, -1));
-        getContentPane().add(jTextFieldResulRel, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 440, 240, -1));
+        getContentPane().add(jtxtERR_ABSO, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 410, 240, -1));
+        getContentPane().add(jtxtERR_REL, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 440, 240, -1));
 
         ButtonRegresar.setText("Menu Principal");
         ButtonRegresar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -142,10 +136,10 @@ public class Interfaz extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jTextFieldAbsoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldAbsoActionPerformed
+    private void jtxtREALActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtREALActionPerformed
 
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldAbsoActionPerformed
+    }//GEN-LAST:event_jtxtREALActionPerformed
 
     private void jCheckBoxRedonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxRedonActionPerformed
         // TODO add your handling code here:
@@ -156,29 +150,71 @@ public class Interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_jCheckBox2ActionPerformed
 
     private void CalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CalcularActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CalcularActionPerformed
 
-    private void jTextFieldResulAbsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldResulAbsActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldResulAbsActionPerformed
+        String dato1, dato2;
+        float res_abs, res_apro;
+        float result_abs = 0, result_apro = 0;
+
+        dato1 = jtxtREAL.getText();
+        dato2 = jtxtAPROX.getText();
+
+        float flotante = Float.parseFloat(dato1);
+        float flotante1 = Float.parseFloat(dato2);
+
+        res_abs = flotante - flotante1;
+        res_apro = res_abs / flotante;
+
+        if (res_abs < 0) {
+
+            res_abs = res_abs * -1;
+
+            String totales = Float.toString(res_abs);
+            String totaless = Float.toString(res_apro);
+
+            jtxtERR_ABSO.setText(totales);
+            jtxtERR_REL.setText(totaless);
+        }
+
+        if (res_apro < 0) {
+
+            res_apro = res_apro * -1;
+
+            String totales = Float.toString(res_abs);
+            String totaless = Float.toString(res_apro);
+
+            jtxtERR_ABSO.setText(totales);
+            jtxtERR_REL.setText(totaless);
+
+        } else {
+
+            String totales = Float.toString(res_abs);
+            String totaless = Float.toString(res_apro);
+
+            jtxtERR_ABSO.setText(totales);
+            jtxtERR_REL.setText(totaless);
+
+        }
+
+
+    }//GEN-LAST:event_CalcularActionPerformed
 
     private void ButtonRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonRegresarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ButtonRegresarActionPerformed
 
     private void ButtonRegresarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonRegresarMouseClicked
-       TemasMetodo temasmetodo = new TemasMetodo();
-       temasmetodo.setVisible(true);
-       this.dispose();
+        TemasMetodo temasmetodo = new TemasMetodo();
+        temasmetodo.setVisible(true);
+        this.dispose();
         // TODO add your handling code here:
     }//GEN-LAST:event_ButtonRegresarMouseClicked
 
-    /**
-     * @param args the command line arguments
-     */
+    private void jtxtERR_ABSOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtERR_ABSOActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtxtERR_ABSOActionPerformed
+
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
+
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
@@ -201,7 +237,6 @@ public class Interfaz extends javax.swing.JFrame {
         }
         //</editor-fold>
 
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Interfaz().setVisible(true);
@@ -218,14 +253,14 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBoxAprox;
     private javax.swing.JCheckBox jCheckBoxRedon;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel2aprox;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabelReal;
-    private javax.swing.JTextField jTextFieldAbso;
-    private javax.swing.JTextField jTextFieldRela;
-    private javax.swing.JTextField jTextFieldResulAbs;
-    private javax.swing.JTextField jTextFieldResulRel;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField jtxtAPROX;
+    private javax.swing.JTextField jtxtERR_ABSO;
+    private javax.swing.JTextField jtxtERR_REL;
+    private javax.swing.JTextField jtxtREAL;
     // End of variables declaration//GEN-END:variables
 }
