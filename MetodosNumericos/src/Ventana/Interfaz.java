@@ -19,14 +19,16 @@ public class Interfaz extends javax.swing.JFrame {
         jtxtREAL = new javax.swing.JTextField();
         jtxtAPROX = new javax.swing.JTextField();
         Calcular = new javax.swing.JButton();
-        jCheckBoxRedon = new javax.swing.JCheckBox();
-        jCheckBoxAprox = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jtxtERR_ABSO = new javax.swing.JTextField();
         jtxtERR_REL = new javax.swing.JTextField();
         ButtonRegresar = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        NumDec = new javax.swing.JTextField();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
         JLabelFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -72,46 +74,21 @@ public class Interfaz extends javax.swing.JFrame {
                 CalcularActionPerformed(evt);
             }
         });
-        getContentPane().add(Calcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 270, -1, -1));
-
-        jCheckBoxRedon.setFont(new java.awt.Font("Oswald", 0, 12)); // NOI18N
-        jCheckBoxRedon.setForeground(new java.awt.Color(255, 255, 255));
-        jCheckBoxRedon.setText("Redondeo");
-        jCheckBoxRedon.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBoxRedonActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jCheckBoxRedon, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, -1, -1));
-
-        jCheckBoxAprox.setFont(new java.awt.Font("Oswald", 0, 12)); // NOI18N
-        jCheckBoxAprox.setForeground(new java.awt.Color(255, 255, 255));
-        jCheckBoxAprox.setText("Truncamiento");
-        getContentPane().add(jCheckBoxAprox, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 190, -1, -1));
-
-        jCheckBox2.setFont(new java.awt.Font("Oswald", 0, 12)); // NOI18N
-        jCheckBox2.setForeground(new java.awt.Color(255, 255, 255));
-        jCheckBox2.setText("Solo Resultado");
-        jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox2ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jCheckBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 220, -1, -1));
+        getContentPane().add(Calcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 490, -1, -1));
 
         jLabel3.setText("Error Absoluto: ");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 420, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 450, -1, -1));
 
         jLabel4.setText("Error Relativo: ");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 450, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, -1, -1));
 
         jtxtERR_ABSO.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtxtERR_ABSOActionPerformed(evt);
             }
         });
-        getContentPane().add(jtxtERR_ABSO, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 410, 240, -1));
-        getContentPane().add(jtxtERR_REL, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 440, 240, -1));
+        getContentPane().add(jtxtERR_ABSO, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 400, 240, -1));
+        getContentPane().add(jtxtERR_REL, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 440, 240, -1));
 
         ButtonRegresar.setText("Menu Principal");
         ButtonRegresar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -126,8 +103,31 @@ public class Interfaz extends javax.swing.JFrame {
         });
         getContentPane().add(ButtonRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 590, -1, -1));
 
+        jLabel2.setText("¿Quieres hacer alguna de estas opciones?");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, -1, -1));
+
+        jLabel5.setText("Cantidad decimal:");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, -1, -1));
+        getContentPane().add(NumDec, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, 90, -1));
+
+        jButton2.setText("Redondeo");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, -1, -1));
+
+        jButton3.setText("Truncamiento");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 270, -1, -1));
+
         JLabelFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/verd.jpg"))); // NOI18N
-        getContentPane().add(JLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-8, 0, 390, 640));
+        getContentPane().add(JLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 390, 640));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -140,14 +140,6 @@ public class Interfaz extends javax.swing.JFrame {
 
         // TODO add your handling code here:
     }//GEN-LAST:event_jtxtREALActionPerformed
-
-    private void jCheckBoxRedonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxRedonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBoxRedonActionPerformed
-
-    private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox2ActionPerformed
 
     private void CalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CalcularActionPerformed
 
@@ -213,6 +205,104 @@ public class Interfaz extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jtxtERR_ABSOActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+ String dato1, dato2;
+        float res_abs, res_apro;
+        float result_abs = 0, result_apro = 0;
+
+        dato1 = jtxtREAL.getText();
+        dato2 = jtxtAPROX.getText();
+
+        float flotante = Float.parseFloat(dato1);
+        float flotante1 = Float.parseFloat(dato2);
+
+        res_abs = flotante - flotante1;
+        res_apro = res_abs / flotante;
+        
+        if (res_abs < 0) {
+
+            res_abs = res_abs * -1;
+
+            String totales = Float.toString(res_abs);
+            String totaless = Float.toString(res_apro);
+            
+
+            jtxtERR_ABSO.setText(totales);
+            jtxtERR_REL.setText(totaless);
+        }
+
+        if (res_apro < 0) {
+
+            res_apro = res_apro * -1;
+
+            String totales = Float.toString(res_abs);
+            String totaless = Float.toString(res_apro);
+
+            jtxtERR_ABSO.setText(totales);
+            jtxtERR_REL.setText(totaless);
+
+        } else {
+
+            String totales = Float.toString(res_abs);
+            String totaless = Float.toString(res_apro);
+
+            jtxtERR_ABSO.setText(totales);
+            jtxtERR_REL.setText(totaless);
+
+        }
+        
+        
+// TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+     String dato1, dato2;
+        float res_abs, res_apro;
+        float result_abs = 0, result_apro = 0;
+
+        dato1 = jtxtREAL.getText();
+        dato2 = jtxtAPROX.getText();
+
+        float flotante = Float.parseFloat(dato1);
+        float flotante1 = Float.parseFloat(dato2);
+
+        res_abs = flotante - flotante1;
+        res_apro = res_abs / flotante;
+        
+        if (res_abs < 0) {
+
+            res_abs = res_abs * -1;
+
+            String totales = Float.toString(res_abs);
+            String totaless = Float.toString(res_apro);
+            
+
+            jtxtERR_ABSO.setText(totales);
+            jtxtERR_REL.setText(totaless);
+        }
+
+        if (res_apro < 0) {
+
+            res_apro = res_apro * -1;
+
+            String totales = Float.toString(res_abs);
+            String totaless = Float.toString(res_apro);
+
+            jtxtERR_ABSO.setText(totales);
+            jtxtERR_REL.setText(totaless);
+
+        } else {
+
+            String totales = Float.toString(res_abs);
+            String totaless = Float.toString(res_apro);
+
+            jtxtERR_ABSO.setText(totales);
+            jtxtERR_REL.setText(totaless);
+
+        }
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
+
     public static void main(String args[]) {
 
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -248,14 +338,16 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JButton ButtonRegresar;
     private javax.swing.JButton Calcular;
     private javax.swing.JLabel JLabelFondo;
+    private javax.swing.JTextField NumDec;
     private javax.swing.JButton jButton1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBoxAprox;
-    private javax.swing.JCheckBox jCheckBoxRedon;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel2aprox;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabelReal;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jtxtAPROX;
