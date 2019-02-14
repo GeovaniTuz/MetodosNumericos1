@@ -1,6 +1,7 @@
 package Ventana;
-
+ 
 public class Interfaz extends javax.swing.JFrame {
+   
 
     public Interfaz() {
         initComponents();
@@ -21,7 +22,7 @@ public class Interfaz extends javax.swing.JFrame {
         Calcular = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jtxtERR_ABSO = new javax.swing.JTextField();
+        jtxtRedo_ABSO = new javax.swing.JTextField();
         jtxtERR_REL = new javax.swing.JTextField();
         ButtonRegresar = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
@@ -29,7 +30,8 @@ public class Interfaz extends javax.swing.JFrame {
         NumDec = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        JLabelFondo = new javax.swing.JLabel();
+        RedonRela = new javax.swing.JTextField();
+        redonabs = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -74,21 +76,21 @@ public class Interfaz extends javax.swing.JFrame {
                 CalcularActionPerformed(evt);
             }
         });
-        getContentPane().add(Calcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 490, -1, -1));
+        getContentPane().add(Calcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, -1));
 
         jLabel3.setText("Error Absoluto: ");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 450, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 500, -1, -1));
 
         jLabel4.setText("Error Relativo: ");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 450, -1, -1));
 
-        jtxtERR_ABSO.addActionListener(new java.awt.event.ActionListener() {
+        jtxtRedo_ABSO.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtxtERR_ABSOActionPerformed(evt);
+                jtxtRedo_ABSOActionPerformed(evt);
             }
         });
-        getContentPane().add(jtxtERR_ABSO, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 400, 240, -1));
-        getContentPane().add(jtxtERR_REL, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 440, 240, -1));
+        getContentPane().add(jtxtRedo_ABSO, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 170, 240, 30));
+        getContentPane().add(jtxtERR_REL, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 210, 240, -1));
 
         ButtonRegresar.setText("Menu Principal");
         ButtonRegresar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -103,12 +105,12 @@ public class Interfaz extends javax.swing.JFrame {
         });
         getContentPane().add(ButtonRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 590, -1, -1));
 
-        jLabel2.setText("¿Quieres hacer alguna de estas opciones?");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, -1, -1));
+        jLabel2.setText("Ingresa cantidad de decimales.");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 250, -1, -1));
 
         jLabel5.setText("Cantidad decimal:");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, -1, -1));
-        getContentPane().add(NumDec, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, 90, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, -1, 30));
+        getContentPane().add(NumDec, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 280, 90, -1));
 
         jButton2.setText("Redondeo");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -116,7 +118,7 @@ public class Interfaz extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, -1, -1));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 380, -1, -1));
 
         jButton3.setText("Truncamiento");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -124,10 +126,9 @@ public class Interfaz extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 270, -1, -1));
-
-        JLabelFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/verd.jpg"))); // NOI18N
-        getContentPane().add(JLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 390, 640));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 380, -1, -1));
+        getContentPane().add(RedonRela, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 450, 170, 30));
+        getContentPane().add(redonabs, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 500, 170, 30));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -140,7 +141,7 @@ public class Interfaz extends javax.swing.JFrame {
 
         // TODO add your handling code here:
     }//GEN-LAST:event_jtxtREALActionPerformed
-
+double resu1,resu2;
     private void CalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CalcularActionPerformed
 
         String dato1, dato2;
@@ -155,6 +156,7 @@ public class Interfaz extends javax.swing.JFrame {
 
         res_abs = flotante - flotante1;
         res_apro = res_abs / flotante;
+        
 
         if (res_abs < 0) {
 
@@ -163,7 +165,7 @@ public class Interfaz extends javax.swing.JFrame {
             String totales = Float.toString(res_abs);
             String totaless = Float.toString(res_apro);
 
-            jtxtERR_ABSO.setText(totales);
+            jtxtRedo_ABSO.setText(totales);
             jtxtERR_REL.setText(totaless);
         }
 
@@ -174,7 +176,7 @@ public class Interfaz extends javax.swing.JFrame {
             String totales = Float.toString(res_abs);
             String totaless = Float.toString(res_apro);
 
-            jtxtERR_ABSO.setText(totales);
+            jtxtRedo_ABSO.setText(totales);
             jtxtERR_REL.setText(totaless);
 
         } else {
@@ -182,10 +184,12 @@ public class Interfaz extends javax.swing.JFrame {
             String totales = Float.toString(res_abs);
             String totaless = Float.toString(res_apro);
 
-            jtxtERR_ABSO.setText(totales);
+            jtxtRedo_ABSO.setText(totales);
             jtxtERR_REL.setText(totaless);
 
         }
+        resu1 = res_abs;//resultado de primera fase
+        resu2 = res_apro;
 
 
     }//GEN-LAST:event_CalcularActionPerformed
@@ -201,106 +205,59 @@ public class Interfaz extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_ButtonRegresarMouseClicked
 
-    private void jtxtERR_ABSOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtERR_ABSOActionPerformed
+    private void jtxtRedo_ABSOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtRedo_ABSOActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jtxtERR_ABSOActionPerformed
+    }//GEN-LAST:event_jtxtRedo_ABSOActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
- String dato1, dato2;
-        float res_abs, res_apro;
-        float result_abs = 0, result_apro = 0;
-
-        dato1 = jtxtREAL.getText();
-        dato2 = jtxtAPROX.getText();
-
-        float flotante = Float.parseFloat(dato1);
-        float flotante1 = Float.parseFloat(dato2);
-
-        res_abs = flotante - flotante1;
-        res_apro = res_abs / flotante;
+ String dato1;
+ double rec,rec2;
+        dato1 = NumDec.getText();//dato igual a decimal ingresada
+       
+        int decima = Integer.parseInt(dato1); //decima absorve el valor de dato1 en tipo int
+       
+        rec = redondearDecimal(resu1,decima);
+        rec2 = redondearDecimal(resu2,decima);
+        if (rec < 0)
+        {rec = rec*(-1);}
+        if (rec2 < 0)
+        {rec2 = rec2*(-1);}
         
-        if (res_abs < 0) {
-
-            res_abs = res_abs * -1;
-
-            String totales = Float.toString(res_abs);
-            String totaless = Float.toString(res_apro);
-            
-
-            jtxtERR_ABSO.setText(totales);
-            jtxtERR_REL.setText(totaless);
-        }
-
-        if (res_apro < 0) {
-
-            res_apro = res_apro * -1;
-
-            String totales = Float.toString(res_abs);
-            String totaless = Float.toString(res_apro);
-
-            jtxtERR_ABSO.setText(totales);
-            jtxtERR_REL.setText(totaless);
-
-        } else {
-
-            String totales = Float.toString(res_abs);
-            String totaless = Float.toString(res_apro);
-
-            jtxtERR_ABSO.setText(totales);
-            jtxtERR_REL.setText(totaless);
-
-        }
+     String total1 = Double.toString(rec);
+     String total2 = Double.toString(rec2);
+     
+        RedonRela.setText(total1);
+        redonabs.setText(total2);
         
         
-// TODO add your handling code here:
+        
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-     String dato1, dato2;
-        float res_abs, res_apro;
-        float result_abs = 0, result_apro = 0;
-
-        dato1 = jtxtREAL.getText();
-        dato2 = jtxtAPROX.getText();
-
-        float flotante = Float.parseFloat(dato1);
-        float flotante1 = Float.parseFloat(dato2);
-
-        res_abs = flotante - flotante1;
-        res_apro = res_abs / flotante;
+     //codigo para el truncamiento del resultado
+     String dato1;
+ double rec,rec2;
+ 
+        dato1 = NumDec.getText();
+       
+        int decima = Integer.parseInt(dato1); 
         
-        if (res_abs < 0) {
-
-            res_abs = res_abs * -1;
-
-            String totales = Float.toString(res_abs);
-            String totaless = Float.toString(res_apro);
-            
-
-            jtxtERR_ABSO.setText(totales);
-            jtxtERR_REL.setText(totaless);
-        }
-
-        if (res_apro < 0) {
-
-            res_apro = res_apro * -1;
-
-            String totales = Float.toString(res_abs);
-            String totaless = Float.toString(res_apro);
-
-            jtxtERR_ABSO.setText(totales);
-            jtxtERR_REL.setText(totaless);
-
-        } else {
-
-            String totales = Float.toString(res_abs);
-            String totaless = Float.toString(res_apro);
-
-            jtxtERR_ABSO.setText(totales);
-            jtxtERR_REL.setText(totaless);
-
-        }
-        // TODO add your handling code here:
+        rec = truncarDecimal(resu1,decima);
+        rec2 = truncarDecimal(resu2,decima);
+        if (rec < 0)
+        {rec = rec*(-1);}
+        
+        if (rec2 < 0)
+        {rec2 = rec2*(-1);}
+        
+     String total1 = Double.toString(rec);
+     String total2 = Double.toString(rec2);
+     
+        RedonRela.setText(total1);
+        redonabs.setText(total2);
+        
+       
     }//GEN-LAST:event_jButton3ActionPerformed
 
     public static void main(String args[]) {
@@ -337,8 +294,8 @@ public class Interfaz extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ButtonRegresar;
     private javax.swing.JButton Calcular;
-    private javax.swing.JLabel JLabelFondo;
     private javax.swing.JTextField NumDec;
+    private javax.swing.JTextField RedonRela;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -351,8 +308,36 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelReal;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jtxtAPROX;
-    private javax.swing.JTextField jtxtERR_ABSO;
     private javax.swing.JTextField jtxtERR_REL;
     private javax.swing.JTextField jtxtREAL;
+    private javax.swing.JTextField jtxtRedo_ABSO;
+    private javax.swing.JTextField redonabs;
     // End of variables declaration//GEN-END:variables
+
+    private double redondearDecimal(double res, int dec) {
+       double parteEntera=0,resultado=0;
+    resultado = res;//1.123
+    parteEntera =Math.floor(resultado);
+    
+                      //0.123        *   10 a la (4)
+    resultado=(resultado-parteEntera)*Math.pow(10,dec);
+    
+    resultado=Math.round(resultado);
+    
+    resultado=(resultado/Math.pow(10,dec))+parteEntera;
+    return resultado;
+    }
+
+    private double truncarDecimal(double res, int dec) {
+        double parteEntera,truncado;
+        truncado=res;
+        parteEntera =Math.floor(truncado);
+        truncado=(truncado-parteEntera)*Math.pow(10,dec-1);
+        truncado=Math.floor(truncado);
+         truncado=(truncado/Math.pow(10,dec-1))+parteEntera;
+        
+        
+        
+        return truncado;
+    }
 }

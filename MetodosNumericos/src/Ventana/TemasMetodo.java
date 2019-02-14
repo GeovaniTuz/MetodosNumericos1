@@ -30,6 +30,7 @@ public class TemasMetodo extends javax.swing.JFrame {
 
         ButtonSalir = new javax.swing.JButton();
         ButtonTema1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         Fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -44,7 +45,7 @@ public class TemasMetodo extends javax.swing.JFrame {
                 ButtonSalirActionPerformed(evt);
             }
         });
-        getContentPane().add(ButtonSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 30, -1, -1));
+        getContentPane().add(ButtonSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 30, -1, -1));
 
         ButtonTema1.setText("Tema 1");
         ButtonTema1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -58,6 +59,10 @@ public class TemasMetodo extends javax.swing.JFrame {
             }
         });
         getContentPane().add(ButtonTema1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, -1, -1));
+
+        jLabel1.setText("METODOS NUMERICOS.");
+        jLabel1.setIconTextGap(5);
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 140, 60));
 
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/verd.jpg"))); // NOI18N
         getContentPane().add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 386, 646));
@@ -122,5 +127,6 @@ public class TemasMetodo extends javax.swing.JFrame {
     private javax.swing.JButton ButtonSalir;
     private javax.swing.JButton ButtonTema1;
     private javax.swing.JLabel Fondo;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
